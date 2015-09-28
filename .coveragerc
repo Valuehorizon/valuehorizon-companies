@@ -1,0 +1,15 @@
+[run]
+source = companies
+branch = 0
+omit =
+    companies/migrations/*
+    companies/tests/*
+    companies/settings/*
+
+[report]
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    raise AssertionError
+    raise NotImplementedError
+    if __name__ == .__main__.:

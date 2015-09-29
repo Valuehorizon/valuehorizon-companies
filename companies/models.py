@@ -311,7 +311,7 @@ class Company(models.Model):
     
     def get_name_on_date(self, date):
 	"""
-	Get the name of a company on a given date. Accounts for
+	Get the name of a company on a given date. This takes into accounts and
 	name changes that may have occurred.
 	"""
 	if date == None:

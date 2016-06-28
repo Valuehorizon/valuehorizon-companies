@@ -184,6 +184,13 @@ class Company(models.Model):
     def __unicode__(self):
         return u'%s' % (unicode(self.name),)# ' ID: ' + unicode(self.id))
     
+    @staticmethod
+    def autocomplete_search_fields():
+        """
+        Autocomplete for grapelli admin
+        """
+        return ("name__icontains",) 
+
     def get_absolute_url(self):
         if not self.is_government and self.primary_stock_url != None:
             return self.primary_stock_url
